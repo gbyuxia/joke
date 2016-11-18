@@ -1,0 +1,20 @@
+<view class="container">
+ <scroll-view scroll-y="true" class='wrap'>
+      <view wx:for="{{lists}}" class="jokeBox">
+          <view class="jockCnt">{{item.text}}</view>
+           <view class="author">
+               <view> 
+                    <image src="{{item.profile_image}}" mode="center" class="profile" />
+                    <text class="profileName">{{item.name}}</text>
+                </view>
+                 <view>
+                    <text class="mr20">赞：{{item.love}}</text>
+                    <text>贬：{{item.hate}}</text>
+                </view>
+          </view>
+          <audio class="audioBox" id="{{item.id}}" name="{{item.name}}" src="{{item.video_uri}}"></audio>
+          <view class="time">{{item.create_time}}</view>
+      </view>
+      <button bindtap="onRefresh" class="btn-refresh" >刷新</button>
+  </scroll-view>
+</view>

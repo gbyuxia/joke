@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" style="height: 100vh;"  class='wrap'>
+      <view wx:for="{{lists}}" class="jokeBox">
+          <view class="jockCnt">{{item.content}}</view>
+          <view class="time">{{item.updatetime}}</view>
+      </view>
+      <button bindtap="onRefresh" class="btn-refresh" >刷新</button>
+  </scroll-view>
+</view>
